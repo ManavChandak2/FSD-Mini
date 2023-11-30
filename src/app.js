@@ -11,8 +11,9 @@ const Service = require("./models/Service");
 const Banner1 = require("./models/Banner-1");
 const Banner2 = require("./models/Banner-2");
 const Banner3 = require("./models/Banner-3");
-const BAboutUs = require("./models/AboutUs");
+// const BAboutUs = require("./models/AboutUs");x`
 const AboutUs = require("./models/AboutUs");
+const admin = require("./models/admin");
 
 app.use(bodyParser.urlencoded({
   extended:true
@@ -32,6 +33,12 @@ mongoose.connect("mongodb://127.0.0.1/website")
   .then(() => {
     console.log("Db Connected");
     
+    // admin.create({
+    //   username: "Admin",
+    //   password: "pass@123"  
+    // });
+
+
     // AboutUs.create({
     //   content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     // });
